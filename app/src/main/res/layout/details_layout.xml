@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/layout_background"
+    android:layout_margin="@dimen/spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background">
+
+        <com.oui.parisiproject.common.MaskedCardView
+            android:id="@+id/rLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardPreventCornerOverlap="false"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Sunflower.Card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_spacing"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop" />
+
+                <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                    android:id="@+id/worm_dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dotsColor="@color/black"
+                    app:dotsStrokeColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@+id/pager"
+                    android:layout_marginBottom="@dimen/bottom_spacing"
+                    app:dotsCornerRadius="@dimen/spacing_8"
+                    app:dotsSize="@dimen/spacing_8"
+                    app:dotsSpacing="@dimen/spacing_4"
+                    app:dotsStrokeWidth="@dimen/spacing_2" />
+
+            </RelativeLayout>
+        </com.oui.parisiproject.common.MaskedCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_58"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/spacing_13"
+            android:layout_below="@id/rLayout"
+            android:layout_marginLeft="@dimen/spacing_15">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text2_size"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#525353" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_5">
+
+                <ImageView
+                    android:id="@+id/displayCatSubCatIcon"
+                    android:layout_width="@dimen/spacing_9.8"
+                    android:layout_height="@dimen/spacing_13"
+                    android:src="@drawable/bag_icon"/>
+
+                <TextView
+                    android:id="@+id/subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_5"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#6F7171"
+                    android:textSize="@dimen/text1_size" />
+
+                <ImageView
+                    android:id="@+id/distanceIcon"
+                    android:layout_width="@dimen/spacing_9.8"
+                    android:layout_height="@dimen/spacing_13"
+                    android:layout_marginLeft="@dimen/spacing_5"
+                    android:src="@drawable/location_icon_dark"/>
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text1_size"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#6F7171"
+                    android:layout_marginLeft="@dimen/spacing_5" />
+
+                <TextView
+                    android:id="@+id/workingHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text1_size"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#F52B32"
+                    android:layout_marginLeft="@dimen/spacing_5"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

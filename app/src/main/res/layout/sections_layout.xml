@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F7">
+
+    <TextView
+        android:id="@+id/sectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boutiques"
+        android:textSize="@dimen/spacing_20"
+        android:layout_marginTop="@dimen/spacing_15"
+        android:textColor="#383939"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sectionsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sectionTitle"
+        android:layout_marginTop="@dimen/spacing_10" />
+
+</RelativeLayout>

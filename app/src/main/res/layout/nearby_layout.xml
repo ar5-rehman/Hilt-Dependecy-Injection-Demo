@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_10"
+        android:layout_marginTop="@dimen/spacing_10"
+        android:background="@drawable/results_layoutbackground">
+
+        <com.oui.parisiproject.common.MaskedCardView
+            android:id="@+id/rLayout"
+            android:layout_width="@dimen/spacing_69"
+            app:cardPreventCornerOverlap="false"
+            android:clipToPadding="true"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.smallImage"
+            android:layout_height="@dimen/spacing_50">
+
+            <ImageView
+                android:id="@+id/imgSrc"
+                android:layout_width="@dimen/spacing_69"
+                android:layout_height="@dimen/spacing_50"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_eleven"/>
+        </com.oui.parisiproject.common.MaskedCardView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rLayout"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text1_size"
+                android:layout_marginLeft="@dimen/spacing_20"
+                android:textColor="#525353"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/spacing_20"
+                android:layout_marginTop="@dimen/spacing_5">
+
+                <ImageView
+                    android:id="@+id/catSubCatIcon"
+                    android:layout_width="@dimen/spacing_7.54"
+                    android:layout_height="@dimen/spacing_10"
+                    android:textColor="#525353"
+                    android:src="@drawable/map_marker"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="#6F7171"
+                    android:layout_marginLeft="@dimen/spacing_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_marginBottom="@dimen/spacing_7"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lower_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="7.54dp"
+                    android:layout_height="10dp"
+                    android:textColor="#525353"
+                    android:src="@drawable/map_marker"/>
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:textSize="8sp"
+                    android:textColor="#525353"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_marginBottom="7dp"/>
+
+                <TextView
+                    android:id="@+id/hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#CE533D"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

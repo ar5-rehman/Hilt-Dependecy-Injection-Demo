@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.discovery.DiscoveryFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/topTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_45"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:fontFamily="@font/italiana_regular"
+                android:text="Paris aujourd’hui !"
+                android:textColor="#383939"
+                android:textSize="@dimen/text4_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_12"
+                android:layout_marginEnd="@dimen/spacing_78"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Découvrez nos recommandations de lieux et activités"
+                android:textColor="#383939"
+                android:textSize="@dimen/text5_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topTxt" />
+
+            <LinearLayout
+                android:id="@+id/searchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_45"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:background="@drawable/searchbar_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_30"
+                    android:layout_height="@dimen/spacing_18"
+                    android:layout_marginLeft="@dimen/spacing_15"
+                    android:layout_marginTop="@dimen/spacing_15"
+                    android:layout_marginBottom="@dimen/spacing_13"
+                    android:src="@drawable/search_two" />
+
+                <EditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/searchbar_background"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="@string/searchBarHint"
+                    android:inputType="none"
+                    android:textSize="@dimen/text1_size" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/weatherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_70"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:background="@drawable/layout_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_20.27"
+                    android:layout_marginTop="@dimen/spacing_11.74"
+                    android:layout_marginRight="@dimen/spacing_220.73"
+                    android:fontFamily="@font/italiana_regular"
+                    android:text="Paris,"
+                    android:textColor="#383939"
+                    android:textSize="@dimen/text4_size" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_20.27"
+                    android:layout_marginTop="@dimen/spacing_44.74"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="mercredi 19 mai "
+                    android:textColor="#525353"
+                    android:textSize="@dimen/text1_size" />
+
+                <TextView
+                    android:id="@+id/hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_3"
+                    android:layout_marginTop="@dimen/spacing_44.74"
+                    android:layout_toRightOf="@+id/date"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="15:25"
+                    android:textColor="#525353"
+                    android:textSize="@dimen/text1_size" />
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="@dimen/spacing_56"
+                    android:layout_height="@dimen/spacing_24"
+                    android:layout_marginLeft="@dimen/spacing_30.27"
+                    android:layout_marginTop="@dimen/spacing_17.74"
+                    android:layout_toRightOf="@+id/hour"
+                    android:fontFamily="@font/italiana_regular"
+                    android:text="19°C"
+                    android:textColor="#525353"
+                    android:textSize="@dimen/text2_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_30.27"
+                    android:layout_marginTop="@dimen/spacing_44.74"
+                    android:layout_toRightOf="@+id/hour"
+                    android:fontFamily="@font/italiana_regular"
+                    android:text="Jour couvert"
+                    android:textColor="#525353"
+                    android:textSize="@dimen/text2_size" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_220.73"
+                    android:layout_marginTop="@dimen/spacing_22.24"
+                    android:src="@drawable/temp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="234.84dp"
+                    android:layout_marginTop="@dimen/spacing_22.24"
+                    android:layout_marginRight="13.16dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Risque de pluie : 40%"
+                    android:textColor="#525353"
+                    android:textSize="@dimen/text1_size"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/spacing_20"
+                    android:layout_height="@dimen/spacing_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/spacing_44.74"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:src="@drawable/chat_circle" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Catégories"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:textColor="#383939"
+                android:textSize="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:layout_marginTop="@dimen/spacing_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weatherLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:layout_below="@+id/txtCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCategory"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sectionsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryRecyclerView"
+                app:layout_constraintBottom_toBottomOf="@+id/space2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/spacing_20"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryRecyclerView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_80"
+                android:layout_below="@+id/sectionsRecycler"
+                app:layout_constraintTop_toBottomOf="@+id/sectionsRecycler"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/discovery_fragment_placeholder"/>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

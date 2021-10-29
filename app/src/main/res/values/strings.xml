@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">OuiParis</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="searchBarHint" translatable="false"><font size="10">Rechercher un endroit</font></string>
+    <string name="editTextHint" translatable="false"><font size="10">Balade dans les passages couverts de Paris</font></string>
+
+    <string name="tagOne" translatable="false">favorite</string>
+    <string name="tagTwo" translatable="false">have_been</string>
+    <string name="tagThree" translatable="false">want_to_go</string>
+    <string name="tagFour" translatable="false">not_been</string>
+
+    <string name="boutiques" translatable="false">Boutiques</string>
+
+    <string name="paris" translatable="false">Paris,</string>
+    <string name="date" translatable="false">mercredi 19 mai </string>
+    <string name="jour" translatable="false"> Jour couvert</string>
+
+</resources>

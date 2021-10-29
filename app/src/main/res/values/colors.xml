@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#F4E6C8</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#F6EDDA</color>
+    <color name="teal_700">#F6EDDA</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="placeholder_bg">#dddddd</color>
+
+    <color name="textUnselectedColor">#BDBDBD</color>
+    <color name="textSelectedColor">#383939</color>
+
+    <color name="select">#F6EDDA</color>
+    <color name="deSelect">#ffffff</color>
+
+    <color name="polyline">#3248F2</color>
+
+  <!--  app:headerLabelColor="#707070"
+    app:daysLabelsColor="#707070"
+    app:selectionLabelColor="#525353"
+    app:selectionColor="#F6EDDA"
+    app:todayLabelColor="#F6EDDA"
+    app:type="one_day_picker"-->
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/catSubCat_spacing"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        app:singleSelection="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/categoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            app:chipBackgroundColor="#ffffff"
+            android:textColor="#525353"
+            android:textSize="12sp"
+            android:background="#ffffff"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>

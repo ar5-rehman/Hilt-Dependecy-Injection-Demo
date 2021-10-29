@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/spacing_180"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:background="@drawable/layout_background"
+    android:layout_margin="@dimen/spacing_5">
+
+    <RelativeLayout
+        android:layout_width="@dimen/spacing_180"
+        android:layout_height="@dimen/spacing_180">
+
+        <com.oui.parisiproject.common.MaskedCardView
+            android:id="@+id/rLayout"
+            android:layout_width="match_parent"
+            app:cardPreventCornerOverlap="false"
+            android:clipToPadding="true"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Sunflower.Card"
+            android:layout_height="@dimen/spacing_140"
+            >
+
+            <ImageView
+                android:id="@+id/imageSrc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/search_two"/>
+
+        </com.oui.parisiproject.common.MaskedCardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:layout_below="@id/rLayout">
+
+            <TextView
+                android:id="@+id/txtOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="@dimen/spacing_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#525353"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
